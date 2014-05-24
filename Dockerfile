@@ -37,5 +37,5 @@ CMD  ["chmod", "a+x", "davmail.sh"]
 CMD  ["cp", "davmail/davmail.properties", "."]
 #run cp davmail/davmail.properties .
 # ADD davmail/davmail.properties /usr/local/davmail/
-#CMD           ["/etc/davmail/davmail.properties"]
+CMD           ["/etc/davmail/davmail.properties"]
 ENTRYPOINT    ["/usr/local/davmail/davmail.sh /usr/local/davmail/davmail.properties"]
