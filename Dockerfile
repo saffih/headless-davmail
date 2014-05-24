@@ -17,17 +17,13 @@ MAINTAINER saffi
 #RUN rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/*
 
 #VOLUME        /etc/davmail
-EXPOSE        1080
-EXPOSE        1143
-EXPOSE        1389
-EXPOSE        1110
-EXPOSE        1025
+#EXPOSE        1080
+#EXPOSE        1143
+#EXPOSE        1389
+#EXPOSE        1110
+#EXPOSE        1025
 # headless start heare
-EXPOSE        80
-EXPOSE        143
-EXPOSE        389
-EXPOSE        110
-EXPOSE        25
+EXPOSE        80 143 389 110 25
 
 WORKDIR       /usr/local/davmail/
 ADD fix /usr/local/davmail/
