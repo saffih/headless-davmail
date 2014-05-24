@@ -32,10 +32,10 @@ EXPOSE        25
 WORKDIR       /usr/local/davmail
 ADD davmail /usr/local/davmail/
 
-RUN chmod  a+x davmail/davmail.sh
-RUN cp davmail/davmail.sh .
-RUN chmod a+x davmail.sh
-RUN cp davmail/davmail.properties .
+RUN chmod  a+x /usr/local/davmail/davmail/davmail.sh
+RUN cp /usr/local/davmail/davmail/davmail.sh .
+RUN chmod a+x /usr/local/davmail/davmail.sh
+RUN cp /usr/local/davmail/davmail.properties .
 #run cp davmail/davmail.properties .
 # ADD davmail/davmail.properties /usr/local/davmail/
 CMD           ["/etc/davmail/davmail.properties"]
