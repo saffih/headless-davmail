@@ -1,9 +1,9 @@
 # davmail service
 #
 # This Dockerfile will build a davmail docker image
-
+# todo base 9n orig davmailimage
 FROM ubuntu:12.04
-MAINTAINER BK Box "bk@theboxes.org"
+MAINTAINER saffi
 
 RUN           apt-get update
 RUN           apt-get install -y default-jre wget
@@ -21,7 +21,7 @@ EXPOSE        1143
 EXPOSE        1389
 EXPOSE        1110
 EXPOSE        1025
-
+# headless start heare
 EXPOSE        80
 EXPOSE        143
 EXPOSE        389
@@ -31,10 +31,11 @@ EXPOSE        25
 WORKDIR       /usr/local/davmail
 ADD davmail /usr/local/davmail/
 
-#CMD  ["cp", "davmail/davmail.sh", "."]
+CMD  ["chmod", "a+x", "davmail/davmail.sh"]
+CMD  ["cp", "davmail/davmail.sh", "."]
 CMD  ["chmod", "a+x", "davmail.sh"]
 CMD  ["cp", "davmail/davmail.properties", "."]
 #run cp davmail/davmail.properties .
 # ADD davmail/davmail.properties /usr/local/davmail/
 #CMD           ["/etc/davmail/davmail.properties"]
-ENTRYPOINT    ["/usr/local/davmail/davmail.sh", "/usr/local/davmail/davmail.properties"]
+ENTRYPOINT    ["/usr/local/davmail/davmail.sh /usr/local/davmail/davmail.properties"]
