@@ -2,7 +2,8 @@
 #
 # This Dockerfile will build a davmail docker image
 # todo base 9n orig davmailimage
-FROM ubuntu:12.04
+FROM gondoi/davmail
+#ubuntu:12.04
 MAINTAINER saffi
 
 RUN           apt-get update
