@@ -29,9 +29,9 @@ EXPOSE        389
 EXPOSE        110
 EXPOSE        25
 
-WORKDIR       /usr/local/davmail
+WORKDIR       /usr/local/davmail/
 ADD fix /usr/local/davmail/
-RUN cp /usr/local/davmail/fix/* .
+RUN cp /usr/local/davmail/fix/* /usr/local/davmail/
 RUN chmod a+x /usr/local/davmail/davmail.sh
 
 #CMD           ["/etc/davmail/davmail.properties"]
