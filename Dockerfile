@@ -31,7 +31,7 @@ EXPOSE        25
 WORKDIR       /usr/local/davmail
 ADD davmail /usr/local/davmail/
 
-CMD  ["cp", "davmail/davmail.sh", "."]
+#CMD  ["cp", "davmail/davmail.sh", "."]
 CMD  ["chmod", "a+x", "davmail.sh"]
 CMD  ["cp", "davmail/davmail.properties", "."]
 #run cp davmail/davmail.properties .
