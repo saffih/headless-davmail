@@ -31,7 +31,7 @@ EXPOSE        25
 
 WORKDIR       /usr/local/davmail/
 ADD fix /usr/local/davmail/
-RUN cp /usr/local/davmail/fix/* /usr/local/davmail/
+CMD ["cp", "/usr/local/davmail/fix/*",  "/usr/lxocal/davmail/"] 
 RUN chmod a+x /usr/local/davmail/davmail.sh
 
 #CMD           ["/etc/davmail/davmail.properties"]
