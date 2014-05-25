@@ -8,9 +8,9 @@ EXPOSE        80 143 389 110 25
 
 ADD fix /usr/local/davmail/
 
-CMD ["cp", "/usr/local/davmail/fix/*",  "/usr/lxocal/davmail/"] 
+#CMD ["cp", "/usr/local/davmail/fix/*",  "/usr/local/davmail/"]
 RUN chmod a+x /usr/local/davmail/davmail.sh
 
 #CMD           ["/etc/davmail/davmail.properties"]
-ENV DISCOVER caldav:80/tcp, imap:143/tcp, ldap:389/tcp, pop3:110/tcp
+#ENV DISCOVER caldav:80/tcp, imap:143/tcp, ldap:389/tcp, pop3:110/tcp
 ENTRYPOINT    ["/usr/local/davmail/davmail.sh", "/usr/local/davmail/davmail.properties"]
