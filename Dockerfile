@@ -4,7 +4,7 @@
 
 FROM gondoi/davmail
 MAINTAINER SH "saffi@xanedu.com"
-EXPOSE        80 143 389 110 25
+#EXPOSE        80 143 389 110 25
 
 ADD fix/ /usr/local/davmail/
 RUN chmod a+x /usr/local/davmail/davmail.sh
@@ -13,5 +13,6 @@ RUN chmod a+x /usr/local/davmail/davmail.sh
 
 CMD           ["/usr/local/davmail/davmail.properties"]
 #ENV DISCOVER caldav:80/tcp, imap:143/tcp, ldap:389/tcp, pop3:110/tcp
+EXPOSE      25  80 143 389 110 1025  1080 1143 1389 1110
 ENTRYPOINT    ["/usr/local/davmail/davmail.sh"]
 #ENTRYPOINT    ls -la /usr/local/davmail/
